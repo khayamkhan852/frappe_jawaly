@@ -8,6 +8,7 @@
  "field_order": [
   "template_basic_details_section",
   "template_name",
+  "reference_doctype",
   "template_id",
   "jawaly_template_status",
   "template_namespace",
@@ -146,12 +147,20 @@
    "fieldtype": "Table",
    "label": "Variables",
    "options": "Jawaly Template Variable"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference Doctype",
+   "link_filters": "[[\"DocType\",\"module\",\"not in\",[\"Core\",\"Website\",\"Portal\",\"Setup\",\"Email\",\"Desk\"]],[\"DocType\",\"istable\",\"=\",0],[\"DocType\",\"issingle\",\"=\",0],[\"DocType\",\"is_virtual\",\"=\",0]]",
+   "options": "DocType",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-11 11:05:45.022318",
+ "modified": "2025-06-11 15:30:00.197801",
  "modified_by": "Administrator",
  "module": "Frappe Jawaly",
  "name": "Jawaly Template",
