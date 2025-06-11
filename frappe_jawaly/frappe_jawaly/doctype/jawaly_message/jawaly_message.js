@@ -55,6 +55,7 @@ frappe.ui.form.on("Jawaly Message", {
 		frappe.db.get_doc('Jawaly Template', frm.doc.jawaly_template).then(template => {
 			frm.set_value("body_text", template.body_text);
 			frm.set_value("header_text", template.header_text);
+			frm.set_value("reference_doctype", template.reference_doctype)
 
 			frm.clear_table('variables');
 					
@@ -62,7 +63,6 @@ frappe.ui.form.on("Jawaly Message", {
 				frm.add_child('variables', {
 					variable: v.variable,
 					variable_type: v.variable_type,
-					reference_doctype: v.reference_doctype,
 					field_name: v.field_name,
 					default_value: v.default_value,
 				});

@@ -19,7 +19,6 @@ class JawalyTemplateVariable(Document):
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
-		reference_doctype: DF.Link | None
 		variable: DF.Data
 		variable_type: DF.Literal["Body", "Header"]
 	# end: auto-generated types

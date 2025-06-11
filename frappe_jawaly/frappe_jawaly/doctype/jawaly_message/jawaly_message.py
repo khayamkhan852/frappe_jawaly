@@ -18,6 +18,8 @@ class JawalyMessage(Document):
 		contact: DF.Link | None
 		header_text: DF.TextEditor | None
 		jawaly_template: DF.Link
+		reference_doctype: DF.Link | None
+		reference_name: DF.DynamicLink | None
 		send_to: DF.Data
 		status: DF.Literal["Unsent", "Sent", "Rejected"]
 		variables: DF.Table[JawalyMessageVariable]

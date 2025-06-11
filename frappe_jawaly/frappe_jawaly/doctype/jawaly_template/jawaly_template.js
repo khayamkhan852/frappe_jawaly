@@ -107,8 +107,6 @@ frappe.ui.form.on("Jawaly Template", {
 				callback: function (r) {
 					if (!r.message) return;
 
-                    console.log(r);
-
 					const { body_variables, header_variables } = r.message;
 
 					(header_variables || []).forEach(v => {

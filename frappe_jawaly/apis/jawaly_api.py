@@ -119,8 +119,8 @@ def send_message(jawaly_message_name):
     for variable in jawaly_message.variables:
         value = variable.default_value or ""
 
-        if variable.reference_doctype and variable.reference_name and variable.field_name:
-            doc = frappe.get_doc(variable.reference_doctype, variable.reference_name)
+        if template.reference_doctype and jawaly_message.reference_name and variable.field_name:
+            doc = frappe.get_doc(template.reference_doctype, jawaly_message.reference_name)
             value = doc.get(variable.field_name)
 
         param = {
