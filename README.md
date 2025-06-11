@@ -18,8 +18,11 @@
 
 	```
 	bench get-app frappe_jawaly https://github.com/khayamkhan852/frappe_jawaly.git
-	bench --site [site_name] install-app frappe_jawaly
 	```
+	
+    ```
+	bench --site [site_name] install-app frappe_jawaly
+	```    
 
 
 ## Contributions and Community
