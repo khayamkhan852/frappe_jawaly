@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 09:57:17.816050",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "variable",
+  "variable_type",
+  "reference_doctype",
+  "column_break_fizk",
+  "field_name",
+  "default_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "variable",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Variable",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "variable_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Variable Type",
+   "options": "Body\nHeader",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reference Doctype",
+   "link_filters": "[[\"DocType\",\"module\",\"not in\",[\"Core\",\"Website\",\"Portal\",\"Setup\",\"Email\",\"Desk\"]],[\"DocType\",\"istable\",\"=\",0],[\"DocType\",\"is_virtual\",\"=\",0]]",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_fizk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "field_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Field Name",
+   "mandatory_depends_on": "eval:doc.reference_doctype"
+  },
+  {
+   "fieldname": "default_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Default Value"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-11 12:17:45.179958",
+ "modified_by": "Administrator",
+ "module": "Frappe Jawaly",
+ "name": "Jawaly Template Variable",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

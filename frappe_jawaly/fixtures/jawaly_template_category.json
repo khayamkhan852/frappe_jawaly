@@ -1,0 +1,26 @@
+[
+ {
+  "category": "التسويقية (Marketing)",
+  "docstatus": 0,
+  "doctype": "Jawaly Template Category",
+  "enabled": 1,
+  "modified": "2025-05-27 10:27:07.835679",
+  "name": 1
+ },
+ {
+  "category": "الأدوات المساعدة (Utility)",
+  "docstatus": 0,
+  "doctype": "Jawaly Template Category",
+  "enabled": 1,
+  "modified": "2025-05-27 10:27:24.963446",
+  "name": 2
+ },
+ {
+  "category": "التحقق (Authentication)",
+  "docstatus": 0,
+  "doctype": "Jawaly Template Category",
+  "enabled": 1,
+  "modified": "2025-05-27 10:29:03.232258",
+  "name": 3
+ }
+]

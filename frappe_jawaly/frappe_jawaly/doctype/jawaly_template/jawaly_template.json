@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:template_name",
+ "creation": "2025-05-27 10:13:48.189943",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template_basic_details_section",
+  "template_name",
+  "template_id",
+  "jawaly_template_status",
+  "template_namespace",
+  "enabled",
+  "column_break_kkie",
+  "jawaly_template_name",
+  "template",
+  "category",
+  "template_language",
+  "waba_account_id",
+  "template_header_information_section",
+  "header_type",
+  "header_image",
+  "header_text",
+  "body_text",
+  "message_variables_section",
+  "variables"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Template Name",
+   "no_copy": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_kkie",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "template_basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Template Basic Details"
+  },
+  {
+   "fieldname": "template_id",
+   "fieldtype": "Data",
+   "label": "Template ID",
+   "read_only": 1
+  },
+  {
+   "description": "Select Template from Jawaly (Click Fetch Jawaly Templates)",
+   "fieldname": "jawaly_template_name",
+   "fieldtype": "Select",
+   "label": "Jawaly Template Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "jawaly_template_status",
+   "fieldtype": "Data",
+   "label": "Template Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "template_language",
+   "fieldtype": "Data",
+   "label": "Template Language",
+   "read_only": 1
+  },
+  {
+   "fieldname": "template_namespace",
+   "fieldtype": "Data",
+   "label": "Template Namespace",
+   "read_only": 1
+  },
+  {
+   "fieldname": "waba_account_id",
+   "fieldtype": "Data",
+   "label": "WABA Account ID",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "body_text",
+   "fieldtype": "Long Text",
+   "label": "Body Text",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "template_header_information_section",
+   "fieldtype": "Section Break",
+   "label": "Template Messages Preview"
+  },
+  {
+   "fieldname": "header_type",
+   "fieldtype": "Data",
+   "label": "Header Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.header_type=='TEXT'",
+   "fieldname": "header_text",
+   "fieldtype": "Long Text",
+   "label": "Header Text",
+   "mandatory_depends_on": "eval:doc.header_type=='TEXT'",
+   "read_only": 1
+  },
+  {
+   "fieldname": "template",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.header_type=='IMAGE'",
+   "description": "Upload only public image",
+   "fieldname": "header_image",
+   "fieldtype": "Attach",
+   "label": "Header Image",
+   "mandatory_depends_on": "eval:doc.header_type=='IMAGE'"
+  },
+  {
+   "fieldname": "message_variables_section",
+   "fieldtype": "Section Break",
+   "label": "Message Variables"
+  },
+  {
+   "fieldname": "variables",
+   "fieldtype": "Table",
+   "label": "Variables",
+   "options": "Jawaly Template Variable"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 11:05:45.022318",
+ "modified_by": "Administrator",
+ "module": "Frappe Jawaly",
+ "name": "Jawaly Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

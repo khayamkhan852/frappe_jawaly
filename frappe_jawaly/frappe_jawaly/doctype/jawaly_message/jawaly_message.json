@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MSG-{send_to}-{####}",
+ "creation": "2025-06-02 12:59:47.814987",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "jawaly_template",
+  "status",
+  "column_break_egtk",
+  "contact",
+  "send_to",
+  "header_information_section",
+  "header_text",
+  "body_text",
+  "message_variables_section",
+  "variables"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_egtk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "jawaly_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Jawaly Template",
+   "options": "Jawaly Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "body_text",
+   "fieldtype": "Long Text",
+   "label": "Body Text",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fetch_from": "contact.phone",
+   "fetch_if_empty": 1,
+   "fieldname": "send_to",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Send To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_information_section",
+   "fieldtype": "Section Break",
+   "label": "Message Information"
+  },
+  {
+   "fieldname": "header_text",
+   "fieldtype": "Text Editor",
+   "label": "Header Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "message_variables_section",
+   "fieldtype": "Section Break",
+   "label": "Message Variables"
+  },
+  {
+   "fieldname": "variables",
+   "fieldtype": "Table",
+   "label": "Variables",
+   "options": "Jawaly Message Variable"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Unsent\nSent\nRejected",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "link_filters": "[[\"Contact\",\"phone\",\"is\",\"set\"]]",
+   "options": "Contact"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-11 12:43:27.576103",
+ "modified_by": "Administrator",
+ "module": "Frappe Jawaly",
+ "name": "Jawaly Message",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Sent"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ]
+}
