@@ -38,6 +38,7 @@
    "label": "Project ID"
   },
   {
+   "default": "https://api-users.4jawaly.com/api/v1/",
    "fieldname": "base_url",
    "fieldtype": "Data",
    "label": "Base URL",
@@ -82,7 +83,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-06-04 11:07:50.935790",
+ "modified": "2025-06-12 15:06:21.331270",
  "modified_by": "Administrator",
  "module": "Frappe Jawaly",
  "name": "Jawaly Settings",

@@ -184,15 +184,22 @@ def send_message(jawaly_message_name):
 			
         data = response.json()
     except requests.exceptions.HTTPError as e:
+        jawaly_message.status = "Rejected"
+        jawaly_message.save()        
         return {
             "request_code": e.response.status_code,
             "bad_request": json.loads(e.response.text)
         }
     except Exception as e:
+        jawaly_message.status = "Rejected"
+        jawaly_message.save()        
         frappe.throw("Failed to connect to 4Jawaly API.")
 
     if response.status_code != 200:
         frappe.throw(f"API Error {response.status_code}: {data.get('message')}")
     
+    jawaly_message.status = "Sent"
+    jawaly_message.save()
+
     return data
     

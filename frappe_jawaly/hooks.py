@@ -30,6 +30,8 @@ fixtures = ["Marketing Template Type", "Jawaly Template Category"]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/frappe_jawaly/css/frappe_jawaly.css"
 # app_include_js = "/assets/frappe_jawaly/js/frappe_jawaly.js"
+app_include_js = "/assets/frappe_jawaly/js/jawaly_whatsapp.js"
+
 
 # include js, css files in header of web template
 # web_include_css = "/assets/frappe_jawaly/css/frappe_jawaly.css"

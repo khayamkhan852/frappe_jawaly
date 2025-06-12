@@ -25,6 +25,7 @@ class JawalyTemplate(Document):
 		header_type: DF.Data | None
 		jawaly_template_name: DF.Literal[None]
 		jawaly_template_status: DF.Data | None
+		reference_doctype: DF.Link
 		template: DF.Data | None
 		template_id: DF.Data | None
 		template_language: DF.Data | None

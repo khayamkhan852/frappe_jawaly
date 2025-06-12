@@ -20,7 +20,6 @@ frappe.ui.form.on("Jawaly Message", {
 
 						if (response.message && response.message.sent === true) {
 							frappe.show_alert({ message: __("Message sent successfully!"), indicator: "green" });
-							frm.set_value('status', 'Sent');
 						}
 
 						if (response.message.request_code && response.message.bad_request) {
@@ -28,23 +27,18 @@ frappe.ui.form.on("Jawaly Message", {
     						message = error.error_data?.details || error.message || 'Unknown error occurred';
 
 							frappe.msgprint(message || __('Message could not be sent.'));
-
-							frm.set_value('status', 'Rejected');
 						}
 
 						if (response.message && response.message.sent === false) {
 							if (response.message.e.error.details) {
 								frappe.msgprint(response.message.e.error.details || __('Message could not be sent.'));
 							}
-
-							frm.set_value('status', 'Rejected');
 						}
-
-						frm.save();
-
+						frm.reload_doc()
 					},
 					error: function () {
 						loading.hide();
+						frm.reload_doc()
 					}
 				});
 			});			
