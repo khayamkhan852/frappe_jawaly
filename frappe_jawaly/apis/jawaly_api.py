@@ -5,13 +5,42 @@ import json
 from frappe.utils import get_url
 
 @frappe.whitelist()
+def fetch_account_details():
+    settings = frappe.get_single("Jawaly Settings")
+
+    if not (settings.api_key and settings.api_secret and settings.base_url):
+        frappe.throw("Missing API Key, Secret, WhatsApp Number ID, or Base URL in Jawaly Settings.")
+
+    url = f"{settings.base_url}/list-projects"
+
+    try:
+        response = requests.get(
+            url,
+            auth=(settings.api_key, settings.get_password('api_secret')),
+            headers={
+                "Accept": "application/json"
+            }
+        )  
+
+        data = response.json()
+    except requests.exceptions.HTTPError as e:
+        frappe.throw(e.response.text )
+    except Exception as e:
+        frappe.throw("Failed to connect to 4Jawaly API.")    
+
+    if response.status_code != 200:
+        frappe.throw(f"API Error {response.status_code}: {data.get('message')}")
+
+    return data
+
+@frappe.whitelist()
 def get_templates():
     settings = frappe.get_single("Jawaly Settings")
 
     if not (settings.api_key and settings.api_secret and settings.whatsapp_number_id and settings.base_url):
         frappe.throw("Missing API Key, Secret, WhatsApp Number ID, or Base URL in Jawaly Settings.")
 
-    base_url = f"{settings.base_url.rstrip('/')}/whatsapp/templates/{settings.whatsapp_number_id}"
+    base_url = f"{settings.base_url.rstrip('/')}/templates/{settings.whatsapp_number_id}"
     templates = []
 
     next_url = base_url
@@ -54,7 +83,7 @@ def get_template_by_name(template_name):
     if not (settings.api_key and settings.api_secret and settings.whatsapp_number_id and settings.base_url):
         frappe.throw("Missing API Key, Secret, WhatsApp Number ID, or Base URL in Jawaly Settings.")
 
-    url = f"{settings.base_url}whatsapp/templates/{settings.whatsapp_number_id}?name={template_name}"
+    url = f"{settings.base_url}/templates/{settings.whatsapp_number_id}?name={template_name}"
 
     try:
         response = requests.get(
@@ -110,7 +139,7 @@ def send_message(jawaly_message_name):
 
     template = frappe.get_doc("Jawaly Template", jawaly_message.jawaly_template)
 
-    url = f"{settings.base_url}whatsapp/{settings.whatsapp_number_id}"
+    url = f"{settings.base_url}/{settings.whatsapp_number_id}"
 
     params = []
     header_params = []
@@ -165,7 +194,7 @@ def send_message(jawaly_message_name):
             "template": template.template,
             "language": {
                 "policy": settings.language_policy,
-                "code": template.template_language or settings.language_code,
+                "code": template.template_language or 'en',
             },
             "namespace": template.template_namespace,
             "params": params

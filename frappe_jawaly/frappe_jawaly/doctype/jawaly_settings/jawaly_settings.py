@@ -17,11 +17,8 @@ class JawalySettings(Document):
 		api_key: DF.Data | None
 		api_secret: DF.Password | None
 		base_url: DF.Data | None
-		language: DF.Link | None
-		language_code: DF.Data | None
+		expired_at: DF.Date | None
 		language_policy: DF.Data | None
-		namespace: DF.Data | None
-		project_id: DF.Data | None
 		whatsapp_number: DF.Data | None
 		whatsapp_number_id: DF.Data | None
 	# end: auto-generated types

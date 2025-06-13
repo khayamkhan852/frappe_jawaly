@@ -6,16 +6,13 @@
  "engine": "InnoDB",
  "field_order": [
   "api_key",
-  "project_id",
-  "whatsapp_number",
-  "language",
-  "namespace",
+  "base_url",
+  "language_policy",
+  "expired_at",
   "column_break_dwzx",
   "api_secret",
-  "base_url",
   "whatsapp_number_id",
-  "language_policy",
-  "language_code"
+  "whatsapp_number"
  ],
  "fields": [
   {
@@ -33,12 +30,7 @@
    "label": "API Secret"
   },
   {
-   "fieldname": "project_id",
-   "fieldtype": "Data",
-   "label": "Project ID"
-  },
-  {
-   "default": "https://api-users.4jawaly.com/api/v1/",
+   "default": "https://api-users.4jawaly.com/api/v1/whatsapp",
    "fieldname": "base_url",
    "fieldtype": "Data",
    "label": "Base URL",
@@ -47,43 +39,34 @@
   {
    "fieldname": "whatsapp_number",
    "fieldtype": "Data",
-   "label": "Whatsapp Number"
+   "label": "Whatsapp Number",
+   "read_only": 1
   },
   {
    "default": "deterministic",
    "fieldname": "language_policy",
    "fieldtype": "Data",
-   "label": "Language Policy"
-  },
-  {
-   "fieldname": "language",
-   "fieldtype": "Link",
-   "label": "Language",
-   "options": "Language"
-  },
-  {
-   "fetch_from": "language.language_code",
-   "fetch_if_empty": 1,
-   "fieldname": "language_code",
-   "fieldtype": "Data",
-   "label": "Language Code"
-  },
-  {
-   "fieldname": "namespace",
-   "fieldtype": "Data",
-   "label": "Namespace"
+   "label": "Language Policy",
+   "read_only": 1
   },
   {
    "fieldname": "whatsapp_number_id",
    "fieldtype": "Data",
-   "label": "Whatsapp Number ID"
+   "label": "Whatsapp Number ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expired_at",
+   "fieldtype": "Date",
+   "label": "Expired At",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-06-12 15:06:21.331270",
+ "modified": "2025-06-13 12:54:19.271882",
  "modified_by": "Administrator",
  "module": "Frappe Jawaly",
  "name": "Jawaly Settings",

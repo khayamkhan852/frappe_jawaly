@@ -160,7 +160,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-11 15:30:00.197801",
+ "modified": "2025-06-12 16:10:43.691144",
  "modified_by": "Administrator",
  "module": "Frappe Jawaly",
  "name": "Jawaly Template",
@@ -181,6 +181,7 @@
   }
  ],
  "row_format": "Dynamic",
+ "search_fields": "reference_doctype,template",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

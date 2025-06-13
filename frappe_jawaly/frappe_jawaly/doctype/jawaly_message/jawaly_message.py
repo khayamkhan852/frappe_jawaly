@@ -29,7 +29,7 @@ class JawalyMessage(Document):
 		pass
 
 @frappe.whitelist()
-def save_jawaly_message(template, contact, send_to, reference_doctype=None, reference_name=None):
+def save_jawaly_message(template, send_to, contact=None, reference_doctype=None, reference_name=None):
 	template_doc = frappe.get_doc("Jawaly Template", template)
 
 	if reference_doctype != template_doc.reference_doctype:

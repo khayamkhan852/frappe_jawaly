@@ -47,8 +47,8 @@ $(document).on('app_ready', function () {
 										method: "frappe_jawaly.frappe_jawaly.doctype.jawaly_message.jawaly_message.save_jawaly_message",
 										args: {
 											template: values.jawaly_template,
+                                            send_to: values.send_to,
 											contact: values.contact,
-											send_to: values.send_to,
 											reference_doctype: reference_doctype,
 											reference_name: reference_name
 										},
@@ -85,6 +85,16 @@ $(document).on('app_ready', function () {
 							no_submit_on_enter: true,
 						});
 
+                        let jawaly_template = dialog.fields_dict.jawaly_template;
+	                    if (jawaly_template) {
+	                        jawaly_template.get_query = function() {
+	                            return {
+	                                filters: { "reference_doctype": frm.doc.doctype },
+	                                doctype: "Jawaly Template"
+	                            };
+	                        };
+	                        jawaly_template.refresh();
+	                    }
                         dialog.show();
 					});
 				}
