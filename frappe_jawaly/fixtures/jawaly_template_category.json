@@ -1,6 +1,6 @@
 [
  {
-  "category": "التسويقية (Marketing)",
+  "category": "MARKETING",
   "docstatus": 0,
   "doctype": "Jawaly Template Category",
   "enabled": 1,
@@ -8,7 +8,7 @@
   "name": 1
  },
  {
-  "category": "الأدوات المساعدة (Utility)",
+  "category": "UTILITY",
   "docstatus": 0,
   "doctype": "Jawaly Template Category",
   "enabled": 1,
@@ -16,7 +16,7 @@
   "name": 2
  },
  {
-  "category": "التحقق (Authentication)",
+  "category": "AUTHENTICATION",
   "docstatus": 0,
   "doctype": "Jawaly Template Category",
   "enabled": 1,

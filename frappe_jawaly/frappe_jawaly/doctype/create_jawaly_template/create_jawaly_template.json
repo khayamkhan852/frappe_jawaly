@@ -1,0 +1,323 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:template_name",
+ "creation": "2025-06-16 16:31:00.267261",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template_basic_information_section",
+  "template_name",
+  "message_language",
+  "language_code",
+  "column_break_delw",
+  "category",
+  "allow_meta_to_change_the_category",
+  "marketing_template_type",
+  "status",
+  "body_section_section",
+  "body_message",
+  "body_variable_values",
+  "header_tab",
+  "header_section_section",
+  "column_break_pzsv",
+  "header_type",
+  "header_text",
+  "header_variables",
+  "header_attachement",
+  "footer_tab",
+  "footer_text",
+  "buttons_tab",
+  "reply_buttons_section",
+  "reply_buttons",
+  "phone_number_buttons_section",
+  "phone_button_text",
+  "column_break_zpwu",
+  "phone_number",
+  "url_buttons_section",
+  "button_one_text",
+  "button_one_url",
+  "url_one_example",
+  "column_break_omfl",
+  "button_two_text",
+  "button_two_url",
+  "url_two_example"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "description": "Name your message template (in English).",
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_delw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Choose the type of message template you want to create.",
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Jawaly Template Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "template_basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Template Basic Information"
+  },
+  {
+   "depends_on": "eval:doc.category == \"MARKETING\"",
+   "description": "Select the type of marketing template",
+   "fieldname": "marketing_template_type",
+   "fieldtype": "Link",
+   "label": "Marketing Template Type",
+   "mandatory_depends_on": "eval:doc.category == \"MARKETING\"",
+   "options": "Marketing Template Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_meta_to_change_the_category",
+   "fieldtype": "Check",
+   "label": "Allow Meta to change the category"
+  },
+  {
+   "description": "Write the message you want to create a template for.",
+   "fieldname": "message_language",
+   "fieldtype": "Link",
+   "label": "Message Language",
+   "link_filters": "[[\"Language\",\"language_name\",\"in\",[\"English\",\"\u0627\u0644\u0639\u0631\u0628\u064a\u0629\"]]]",
+   "options": "Language",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "message_language.language_code",
+   "fetch_if_empty": 1,
+   "fieldname": "language_code",
+   "fieldtype": "Data",
+   "label": "Language Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "header_section_section",
+   "fieldtype": "Section Break",
+   "label": "Header Section"
+  },
+  {
+   "description": "Add a title or choose the media type for the header.\n\n",
+   "fieldname": "header_type",
+   "fieldtype": "Select",
+   "label": "Header Type",
+   "options": "WITHOUT\nTEXT\nIMAGE\nFILE\nVIDEO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "body_section_section",
+   "fieldtype": "Section Break",
+   "label": "Body Section"
+  },
+  {
+   "description": "Enter your message text in the selected language. For Variables use {{1}} {{2}} {{3}} and so on as mentioned in 4jawaly. (1024 Characters only)",
+   "fieldname": "body_message",
+   "fieldtype": "Long Text",
+   "label": "Body Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_tab",
+   "fieldtype": "Tab Break",
+   "label": "Header"
+  },
+  {
+   "depends_on": "eval:doc.header_type == \"TEXT\"",
+   "description": "You can only use 1 variable {{1}}. (upto 60 characters only)",
+   "fieldname": "header_text",
+   "fieldtype": "Text",
+   "label": "Header Text",
+   "mandatory_depends_on": "eval:doc.header_type == \"TEXT\""
+  },
+  {
+   "depends_on": "eval:doc.header_type == \"IMAGE\" || doc.header_type == \"FILE\" || doc.header_type == \"VIDEO\"",
+   "description": "Upload only public File/Image/Video",
+   "fieldname": "header_attachement",
+   "fieldtype": "Attach",
+   "label": "Header Attachement",
+   "mandatory_depends_on": "eval:doc.header_type == \"IMAGE\" || doc.header_type == \"FILE\" || doc.header_type == \"VIDEO\""
+  },
+  {
+   "bold": 1,
+   "fieldname": "column_break_pzsv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "body_variable_values",
+   "fieldtype": "Table",
+   "label": "Body Variable Values",
+   "options": "Create Jawaly Template Variable"
+  },
+  {
+   "depends_on": "eval:doc.header_type == \"TEXT\"",
+   "fieldname": "header_variables",
+   "fieldtype": "Table",
+   "label": "Header Variables",
+   "options": "Create Jawaly Template Variable"
+  },
+  {
+   "fieldname": "footer_tab",
+   "fieldtype": "Tab Break",
+   "label": "Footer"
+  },
+  {
+   "description": "Add a short line of text to the footer of your message template. (upto 60 characters)",
+   "fieldname": "footer_text",
+   "fieldtype": "Text",
+   "label": "Footer Text"
+  },
+  {
+   "fieldname": "buttons_tab",
+   "fieldtype": "Tab Break",
+   "label": "Buttons"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reply_buttons_section",
+   "fieldtype": "Section Break",
+   "label": "Reply Buttons"
+  },
+  {
+   "fieldname": "reply_buttons",
+   "fieldtype": "Table",
+   "label": "Reply Buttons",
+   "options": "Jawaly Template Reply Button"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "phone_number_buttons_section",
+   "fieldtype": "Section Break",
+   "label": "Phone Number Buttons"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "url_buttons_section",
+   "fieldtype": "Section Break",
+   "label": "URL Buttons"
+  },
+  {
+   "fieldname": "button_one_text",
+   "fieldtype": "Data",
+   "label": "Button One Text"
+  },
+  {
+   "fieldname": "column_break_omfl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.button_one_text",
+   "description": "you can add variables for example:  https://someurl/{{1}}",
+   "fieldname": "button_one_url",
+   "fieldtype": "Data",
+   "label": "Button One Url",
+   "mandatory_depends_on": "eval:doc.button_one_text"
+  },
+  {
+   "fieldname": "button_two_text",
+   "fieldtype": "Data",
+   "label": "Button Two Text"
+  },
+  {
+   "depends_on": "eval:doc.button_two_text",
+   "description": "you can add variables for example: https://someurl/{{1}}",
+   "fieldname": "button_two_url",
+   "fieldtype": "Data",
+   "label": "Button Two Url",
+   "mandatory_depends_on": "eval:doc.button_two_text"
+  },
+  {
+   "fieldname": "phone_button_text",
+   "fieldtype": "Data",
+   "label": "Phone Button Text"
+  },
+  {
+   "fieldname": "column_break_zpwu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.phone_button_text",
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "mandatory_depends_on": "eval:doc.phone_button_text"
+  },
+  {
+   "depends_on": "eval:doc.button_one_url",
+   "description": "give example url if variable is used in button one url",
+   "fieldname": "url_one_example",
+   "fieldtype": "Data",
+   "label": "URL One Example",
+   "options": "URL"
+  },
+  {
+   "depends_on": "eval:doc.button_two_url",
+   "description": "give example url if variable is used in button two url",
+   "fieldname": "url_two_example",
+   "fieldtype": "Data",
+   "label": "URL Two Example",
+   "options": "URL"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Not Sent\nSent\nRejected",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-24 14:54:52.388531",
+ "modified_by": "Administrator",
+ "module": "Frappe Jawaly",
+ "name": "Create Jawaly Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Not Sent"
+  },
+  {
+   "color": "Green",
+   "title": "Sent"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ]
+}

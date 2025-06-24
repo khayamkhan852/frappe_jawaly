@@ -34,7 +34,8 @@
    "fieldname": "base_url",
    "fieldtype": "Data",
    "label": "Base URL",
-   "options": "URL"
+   "options": "URL",
+   "read_only": 1
   },
   {
    "fieldname": "whatsapp_number",
@@ -66,7 +67,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-06-13 12:54:19.271882",
+ "modified": "2025-06-13 14:44:17.566081",
  "modified_by": "Administrator",
  "module": "Frappe Jawaly",
  "name": "Jawaly Settings",

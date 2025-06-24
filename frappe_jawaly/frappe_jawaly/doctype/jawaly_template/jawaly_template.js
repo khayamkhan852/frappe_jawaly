@@ -46,7 +46,7 @@ frappe.ui.form.on("Jawaly Template", {
                 async: false,
                 callback: function (response) {
                     loading.hide();
-                    
+                    console.log(response.message);
                     if (response.message) {
                         frm.set_value('template', response.message.name || '');
                         frm.set_value('category', response.message.category || '');

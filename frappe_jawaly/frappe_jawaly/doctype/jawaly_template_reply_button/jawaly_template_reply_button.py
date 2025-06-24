@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class JawalyTemplateCategory(Document):
+class JawalyTemplateReplyButton(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,7 +14,9 @@ class JawalyTemplateCategory(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		category: DF.Data
-		enabled: DF.Check
+		parent: DF.Data
+		parentfield: DF.Data
+		parenttype: DF.Data
+		reply_button_text: DF.Data
 	# end: auto-generated types
 	pass
