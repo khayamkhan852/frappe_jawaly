@@ -1,26 +1,34 @@
 [
  {
-  "category": "MARKETING",
-  "docstatus": 0,
-  "doctype": "Jawaly Template Category",
-  "enabled": 1,
-  "modified": "2025-05-27 10:27:07.835679",
-  "name": 1
- },
- {
   "category": "UTILITY",
   "docstatus": 0,
   "doctype": "Jawaly Template Category",
   "enabled": 1,
-  "modified": "2025-05-27 10:27:24.963446",
-  "name": 2
+  "modified": "2025-06-17 12:24:41.199937",
+  "name": "UTILITY"
+ },
+ {
+  "category": "MARKETING",
+  "docstatus": 0,
+  "doctype": "Jawaly Template Category",
+  "enabled": 1,
+  "modified": "2025-06-17 12:26:10.456396",
+  "name": "MARKETING"
  },
  {
   "category": "AUTHENTICATION",
   "docstatus": 0,
   "doctype": "Jawaly Template Category",
   "enabled": 1,
-  "modified": "2025-05-27 10:29:03.232258",
-  "name": 3
+  "modified": "2025-06-17 12:26:30.096910",
+  "name": "AUTHENTICATION"
+ },
+ {
+  "category": "sczxczxczx",
+  "docstatus": 0,
+  "doctype": "Jawaly Template Category",
+  "enabled": 1,
+  "modified": "2025-06-24 15:33:00.779309",
+  "name": "sczxczxczx"
  }
 ]

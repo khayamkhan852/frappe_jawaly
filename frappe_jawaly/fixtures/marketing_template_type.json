@@ -3,24 +3,24 @@
   "docstatus": 0,
   "doctype": "Marketing Template Type",
   "enabled": 1,
-  "modified": "2025-05-27 10:37:11.994020",
-  "name": 1,
+  "modified": "2025-06-13 11:37:56.096340",
+  "name": 4,
   "type": "Normal"
  },
  {
   "docstatus": 0,
   "doctype": "Marketing Template Type",
   "enabled": 1,
-  "modified": "2025-05-27 10:37:59.455808",
-  "name": 2,
+  "modified": "2025-06-13 11:37:56.212137",
+  "name": 5,
   "type": "Multimedia Template"
  },
  {
   "docstatus": 0,
   "doctype": "Marketing Template Type",
   "enabled": 1,
-  "modified": "2025-05-27 10:38:40.443177",
-  "name": 3,
+  "modified": "2025-06-13 11:37:56.304429",
+  "name": 6,
   "type": "Limited Time Offer Template"
  }
 ]
