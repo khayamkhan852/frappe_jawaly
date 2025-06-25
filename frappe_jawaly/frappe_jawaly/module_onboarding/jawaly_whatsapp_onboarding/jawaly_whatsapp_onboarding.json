@@ -1,0 +1,35 @@
+{
+ "allow_roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "creation": "2025-06-25 15:21:13.138688",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "app/jawaly-settings",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2025-06-25 15:21:13.138688",
+ "modified_by": "Administrator",
+ "module": "Frappe Jawaly",
+ "name": "Jawaly Whatsapp Onboarding",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Setup Jawaly Settings"
+  },
+  {
+   "step": "Create Templates and Send to Jawaly"
+  },
+  {
+   "step": "Create Template From Jawaly"
+  },
+  {
+   "step": "Send Jawaly Message"
+  }
+ ],
+ "subtitle": "Send Message, Create Jawaly Template and More",
+ "success_message": "Frappe Jawaly is all set up!",
+ "title": "Let's Set Up Your Frappe Jawaly."
+}

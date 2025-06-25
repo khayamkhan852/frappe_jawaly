@@ -1,0 +1,34 @@
+{
+ "charts": [
+  {
+   "chart_name": "Total Whatsapp Message Sent",
+   "label": "Total Whatsapp Message Sent"
+  }
+ ],
+ "content": "[{\"id\":\"8paatjpndf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Frappe Jawaly Whatsapp</span>\",\"col\":12}},{\"id\":\"nzWckYFzwG\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Jawaly Whatsapp Onboarding\",\"col\":12}},{\"id\":\"RCpcfe5iPc\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Whatsapp Message Sent\",\"col\":12}}]",
+ "creation": "2025-06-25 15:25:33.136536",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "message-1",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Frappe Jawaly Whatsapp",
+ "links": [],
+ "modified": "2025-06-25 15:26:54.615505",
+ "modified_by": "Administrator",
+ "module": "Frappe Jawaly",
+ "name": "Frappe Jawaly Whatsapp",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Salary Payout",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 22.0,
+ "shortcuts": [],
+ "title": "Frappe Jawaly Whatsapp"
+}

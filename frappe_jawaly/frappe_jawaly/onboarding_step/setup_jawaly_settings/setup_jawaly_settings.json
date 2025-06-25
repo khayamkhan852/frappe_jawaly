@@ -1,0 +1,21 @@
+{
+ "action": "Go to Page",
+ "action_label": "Jawaly Settings",
+ "creation": "2025-06-25 14:21:16.298659",
+ "description": "To get started with Frappe Jawaly integration, you need to configure your Jawaly settings. Begin by entering your API Key and API Secret Key from your Jawaly profile. These credentials will allow your Frappe application to securely connect to your Jawaly account.\n\nOnce you've entered the required keys, click on Fetch Account Details. This action will retrieve and update the Jawaly settings in your system, ensuring that your WhatsApp communication is set up correctly and ready to go. With the settings in place, you're all set to start sending and receiving messages via WhatsApp directly from your Frappe app.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2025-06-25 14:21:16.298659",
+ "modified_by": "Administrator",
+ "name": "Setup Jawaly Settings",
+ "owner": "Administrator",
+ "path": "app/jawaly-settings",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Setup Jawaly Settings",
+ "validate_action": 1
+}

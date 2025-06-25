@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Create New Jawaly Template",
+ "creation": "2025-06-25 14:26:01.381487",
+ "description": "The Create Jawaly Template doctype allows you to design custom WhatsApp message templates. \nOnce created, simply send the template to Jawaly, making it ready for use in your WhatsApp communication.\nThis streamlines sending personalized messages like order confirmations, promotions, and reminders.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2025-06-25 14:27:38.957841",
+ "modified_by": "Administrator",
+ "name": "Create Templates and Send to Jawaly",
+ "owner": "Administrator",
+ "reference_document": "Create Jawaly Template",
+ "show_form_tour": 1,
+ "show_full_form": 1,
+ "title": "Create Templates and Send to Jawaly",
+ "validate_action": 1
+}

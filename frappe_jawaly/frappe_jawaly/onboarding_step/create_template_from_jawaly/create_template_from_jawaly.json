@@ -1,0 +1,20 @@
+{
+ "action": "Create Entry",
+ "creation": "2025-06-25 14:38:49.299163",
+ "description": "The Jawaly Template doctype allows you to fetch all available WhatsApp templates from Jawaly. \n\nBy clicking the Fetch Jawaly Templates button, you can retrieve the templates and automatically populate the Jawaly Template Name field. After fetching, you can customize and create new templates as needed. These templates can then be used to send WhatsApp messages, making communication more efficient and consistent.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2025-06-25 14:38:49.299163",
+ "modified_by": "Administrator",
+ "name": "Create Template From Jawaly",
+ "owner": "Administrator",
+ "reference_document": "Jawaly Template",
+ "show_form_tour": 0,
+ "show_full_form": 1,
+ "title": "Create Template From Jawaly",
+ "validate_action": 1
+}
