@@ -8,7 +8,11 @@ app_license = "mit"
 # Apps
 # ------------------
 
-fixtures = ["Marketing Template Type", "Jawaly Template Category"]
+fixtures = [
+    "Marketing Template Type", 
+    "Jawaly Template Category", 
+    "Create Jawaly Template"
+]
 
 
 # required_apps = []

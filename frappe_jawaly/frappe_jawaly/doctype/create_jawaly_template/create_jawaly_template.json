@@ -88,6 +88,7 @@
    "label": "Allow Meta to change the category"
   },
   {
+   "default": "en",
    "description": "Write the message you want to create a template for.",
    "fieldname": "message_language",
    "fieldtype": "Link",
@@ -97,6 +98,7 @@
    "reqd": 1
   },
   {
+   "description": "only \"en\" and \"ar\" are acceptable.",
    "fetch_from": "message_language.language_code",
    "fetch_if_empty": 1,
    "fieldname": "language_code",
@@ -248,6 +250,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "+966-",
    "depends_on": "eval:doc.phone_button_text",
    "fieldname": "phone_number",
    "fieldtype": "Phone",
@@ -283,7 +286,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-24 14:54:52.388531",
+ "modified": "2025-06-25 13:37:01.690335",
  "modified_by": "Administrator",
  "module": "Frappe Jawaly",
  "name": "Create Jawaly Template",

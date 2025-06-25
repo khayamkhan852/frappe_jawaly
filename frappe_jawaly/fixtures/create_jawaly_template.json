@@ -1,0 +1,61 @@
+[
+ {
+  "allow_meta_to_change_the_category": 1,
+  "body_message": "hello {{1}}, \n\nThis is body example message, and has variable {{2}}",
+  "body_variable_values": [
+   {
+    "example_value": "khayam khan",
+    "parent": "example_template",
+    "parentfield": "body_variable_values",
+    "parenttype": "Create Jawaly Template",
+    "variable": "{{1}}"
+   },
+   {
+    "example_value": "variable value",
+    "parent": "example_template",
+    "parentfield": "body_variable_values",
+    "parenttype": "Create Jawaly Template",
+    "variable": "{{2}}"
+   }
+  ],
+  "button_one_text": "url button",
+  "button_one_url": "https://userv1.4jawaly.com/auth/{{1}}",
+  "button_two_text": "url button 2 text",
+  "button_two_url": "https://userv1.4jawaly.com/auth/{{1}}",
+  "category": "MARKETING",
+  "docstatus": 0,
+  "doctype": "Create Jawaly Template",
+  "footer_text": "this is short footer",
+  "header_attachement": null,
+  "header_text": "this is text header with variable {{1}}",
+  "header_type": "TEXT",
+  "header_variables": [
+   {
+    "example_value": "variable value ",
+    "parent": "example_template",
+    "parentfield": "header_variables",
+    "parenttype": "Create Jawaly Template",
+    "variable": "{{1}}"
+   }
+  ],
+  "language_code": "en",
+  "marketing_template_type": "4",
+  "message_language": "en",
+  "modified": "2025-06-25 10:28:32.326798",
+  "name": "example_template",
+  "phone_button_text": "phone button text",
+  "phone_number": "+966-111111111",
+  "reply_buttons": [
+   {
+    "parent": "example_template",
+    "parentfield": "reply_buttons",
+    "parenttype": "Create Jawaly Template",
+    "reply_button_text": "This is rEply button"
+   }
+  ],
+  "status": "Sent",
+  "template_name": "example_template",
+  "url_one_example": "https://userv1.4jawaly.com/auth/login",
+  "url_two_example": "https://userv1.4jawaly.com/auth/login"
+ }
+]
