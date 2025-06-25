@@ -5,7 +5,7 @@
    "label": "Total Whatsapp Message Sent"
   }
  ],
- "content": "[{\"id\":\"8paatjpndf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Frappe Jawaly Whatsapp</span>\",\"col\":12}},{\"id\":\"nzWckYFzwG\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Jawaly Whatsapp Onboarding\",\"col\":12}},{\"id\":\"RCpcfe5iPc\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Whatsapp Message Sent\",\"col\":12}}]",
+ "content": "[{\"id\":\"8paatjpndf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Frappe Jawaly Whatsapp</span>\",\"col\":12}},{\"id\":\"RCpcfe5iPc\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Total Whatsapp Message Sent\",\"col\":12}},{\"id\":\"RqK8ZiNrKH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"DuLnCJg6Oh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Jawaly Template\",\"col\":3}},{\"id\":\"HJr2Jzhi44\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Jawaly Settings\",\"col\":3}},{\"id\":\"q4xrwFZ_vH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Jawaly Messages\",\"col\":3}},{\"id\":\"L0SGUB9EIO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Jawaly Template Categories\",\"col\":3}},{\"id\":\"0PFNQZXiFY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Jawaly Template\",\"col\":3}},{\"id\":\"R3XWrkGUhc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Marketing Template Types\",\"col\":3}}]",
  "creation": "2025-06-25 15:25:33.136536",
  "custom_blocks": [],
  "docstatus": 0,
@@ -18,7 +18,7 @@
  "is_hidden": 0,
  "label": "Frappe Jawaly Whatsapp",
  "links": [],
- "modified": "2025-06-25 15:36:27.219498",
+ "modified": "2025-06-25 15:49:27.798029",
  "modified_by": "Administrator",
  "module": "Frappe Jawaly",
  "name": "Frappe Jawaly Whatsapp",
@@ -29,6 +29,54 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 1.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Jawaly Template Categories",
+   "link_to": "Jawaly Template Category",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Jawaly Template",
+   "link_to": "Jawaly Template",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Create Jawaly Template",
+   "link_to": "Create Jawaly Template",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Marketing Template Types",
+   "link_to": "Marketing Template Type",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Jawaly Settings",
+   "link_to": "Jawaly Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Jawaly Messages",
+   "link_to": "Jawaly Message",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
  "title": "Frappe Jawaly Whatsapp"
 }
